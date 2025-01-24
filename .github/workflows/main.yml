@@ -25,3 +25,9 @@ jobs:
       - name: Run tests
         run: |
           npm run test
+
+      - name: Run eslint
+        run: |
+          npm run lint
+          echo '## Linting Summary' >> $GITHUB_STEP_SUMMARY
+          echo 'Linting completed successfully!' >> $GITHUB_STEP_SUMMARY
